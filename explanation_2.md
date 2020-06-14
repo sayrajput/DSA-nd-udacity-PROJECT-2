@@ -20,5 +20,16 @@ we have files:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a.c , a.h, .gitkeep, b.c, b.h, .gitkeep,  a.c ,  a.h, t1.c, t1.h    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  total = 10  
   
 
-so time complexity for this problem with this directory is &nbsp;&nbsp;    O(7 + 10) = O(17)
+so time complexity for this problem with this directory is &nbsp;&nbsp;    O(7 + 10) = O(17)  
+  
+
+#### Space Complexity
+Space Complexity will be &nbsp; &nbsp; O(n)  
+  
+
+#### Design Considerations
+**List**  data structures is used  
+There are no lookups in function  
+The function just need to return a list  
+  
 
