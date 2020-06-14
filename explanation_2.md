@@ -1,3 +1,5 @@
+<pre>
+
 # File Recursion
 ## Explanation
 #### Time Complexity
@@ -22,3 +24,5 @@ a.c , a.h, .gitkeep, b.c, b.h, .gitkeep,  a.c ,  a.h, t1.c, t1.h          total 
 
 so time complexity for this problem with this directory is     O(7 + 10) = O(17)
 
+
+</pre>
