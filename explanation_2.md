@@ -28,8 +28,12 @@ Space Complexity will be &nbsp; &nbsp; O(n)
   
 
 #### Design Considerations
-**List**  data structures is used  
+**List**  data structure is used  
+To say,  **Array** in general is used as data strucure   
 There are no lookups in function  
 The function just need to return a list  
+So, the list works fine  
   
+  
+
 
