@@ -76,8 +76,9 @@ class LRU_Cache:
         cur_head = self.head
         out_string = ""
         while cur_head:
-            out_string += str(cur_head.value) + " -> "
+            out_string += str(cur_head.value) + " <-> "
             cur_head = cur_head.next
+        out_string = "None <- "+out_string[:-4] + "-> None"
         return out_string
 
 
@@ -87,7 +88,7 @@ class LRU_Cache:
 print("\n_______________________________________________________________________________")
 print("Test Case 1..\n")
 mylru = LRU_Cache(5)
-print(mylru)               # 0 -> 0 ->     Dummy Nodes only
+print(mylru)               # None <- 0 <-> 0 -> None     Dummy Nodes only
 
 print(mylru.get(9))        # -1 as 9 in not in mylru
 
@@ -105,13 +106,13 @@ mylru3.set(3,3)
 mylru3.set(4,4)
 mylru3.set(5,5)
 
-print(mylru3)                         # 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 0 ->
+print(mylru3)                         # None <- 0 <-> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 0 -> None
 
 
 print(mylru3.get(0))                 # -1
 print(mylru3.get(13))                # -1
 print(mylru3.get(6))                 # -1
-print("_____________________________________________")
+print("\n________________________________________________________________________________________")
 print("Test Case 3..")
 print(mylru3.get(2))                 # 2
 print(mylru3.get(5))                 # 5
@@ -124,4 +125,4 @@ mylru3.set(13,13)                   # capacity full, removes lru node
 print(mylru3.get(13))               # 13
 print(mylru3.get(3))                # -1   as it was removed when 13 inserted
 
-print(mylru3)                       # 0 -> 4 -> 2 -> 5 -> 6 -> 13 -> 0 ->
+print(mylru3)                       # None <- 0 <-> 4 <-> 2 <-> 5 <-> 6 <-> 13 <-> 0 -> None
