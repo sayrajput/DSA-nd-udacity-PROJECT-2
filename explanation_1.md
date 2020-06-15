@@ -1,5 +1,6 @@
-# Explanation  : &nbsp; &nbsp; LRU Cache    
+# LRU Cache    
   
+# Explanation    
 ### Data Structures    
   
  - Doubly Linked List  
