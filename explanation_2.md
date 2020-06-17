@@ -1,6 +1,35 @@
 # File Recursion
-## Explanation
-#### Time Complexity
+## Explanation  
+  
+### Walkthrough  
+Defied a function **find_files()** which takes suffix and path as parameters. 
+This function returns the call of another function **_find_files()** which is defined  
+within it. _find_files() is called with path and files parameters as 
+_find_files(path, files)  
+The function find_files() returns _find_files(path,[])  
+```python
+def find_files(suffix,path):
+    def _find_files(path,files):
+        #
+        #
+        return files
+    
+    return _find_files(path,[])
+
+```  
+  
+**find_files(path,files)**  
+os.listdir(path) is used to list files and dirs under path,  
+for each entry(file/dir) in the list a variable `fullpath` stores(as a string) the fullpath  
+of the file/dir obtained by joining path to entry(file/dir name).  
+Entry is checked if it is a dir or a file by checking its fullpath. If it is a dir, then  
+the **_find_files(fullpath,files)** is called recursively on that dir and the result is stored  
+in a variable `files`. Otherwise, if the entry is a file and its name ends with `suffix`  
+then its `fullpath` is appended to the files list.  
+of that file/dir by joining path to entry
+At the end of function the `files` list is returned.  
+
+### Time Complexity
 Worst case time complexity  &nbsp;&nbsp;&nbsp;  O(n)
 
 os.listdir()  returns a python list of files and directories  
@@ -23,17 +52,26 @@ we have files:
 so time complexity for this problem with this directory is &nbsp;&nbsp;    O(7 + 10) = O(17)  
   
 
-#### Space Complexity
+### Space Complexity
 Space Complexity will be &nbsp; &nbsp; O(n)  
   
 
-#### Design Considerations
-**List**  data structure is used  
-To say,  **Array** in general is used as data structure   
+### Design Considerations
+**List**  data structures is used  
 There are no lookups in function  
 The function just need to return a list  
-So, the list works fine  
-  
   
 
-
+**Conditions handled**  
+- If no path is given  
+```python
+if not bool(path):
+        return []
+```  
+  
+- If falsey is given for suffix, set it to None to simplify the file suffix conditional  
+check  
+```python
+if not bool(suffix):
+        suffix = None
+```
