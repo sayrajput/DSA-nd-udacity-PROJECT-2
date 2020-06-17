@@ -38,8 +38,10 @@ Doubly Linked List &nbsp; &nbsp; **O(n)**
 Dictionary(Hashtable) &nbsp; &nbsp; **O(n)**  
   
 
-
-#### Dummy Head and Tail Nodes  
+### Design Choice  
+Used `cache` dict() to access node with key in **O(1)** time  
+  
+**Dummy Head and Tail Nodes**  
 To reduce code complexity, a dummy head and tail node is used.  
 It eliminates checking if there's a head or tail and then setting or resetting either as needed.  This technique is a common   approach.  
   
