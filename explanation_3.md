@@ -18,12 +18,12 @@ For initialization left_child and right_child are set to None.
 
   
 #### Defined functions  
--  **map_frequency()** which uses a dict() `frequencies` which stores  
+-  **map_frequency(data)** which uses a dict() `frequencies` which stores  
 frequency of each char in data.  
   A list named `map` is defined to store freq,char and the HuffmanNode with those freq and char.  
     
 
-- **build_tree()** which takes frequencies and builds a huffman tree from frequencies.  
+- **build_tree(frequencies)** which takes frequencies and builds a huffman tree from frequencies.  
 #Heapify the frequencies list  
 while there are more than one frequencies in `frequencies` .
 pop() two entries from the heapified list `frequencies`   
@@ -45,28 +45,28 @@ Now we have to build a new node from these popped entries and push the new entry
         heapq.heappush(frequencies,(p_freq,str(p3),parent))
 ```
   
-- **map_codes()**  
+- **map_codes(node,code,map)**  
 Maps nodes of tree into codes of '0' and '1' into a dict()  
 For each node, in the Huffman tree, assign a bit 0 for left child and a 1 for right child.   
 
 
 
-- **huffman_encoding()** which takes `data` as parameter and returns  
+- **huffman_encoding(data)** which takes `data` as parameter and returns  
 encoded data and tree.  
 #step 1 Mapping the frequencies  
-calls the **map_frequency()** function for mapping frequencies of `data`  
+calls the **map_frequency(data)** function for mapping frequencies of `data`  
 #step 2 Build the huffman tree  
-calls the **build_tree()** function on frequencies. 
+calls the **build_tree(frequencies)** function on frequencies. 
   
 #Step3 Map the codes from the Huffman Tree  
-calls the **map_codes()** function  
+calls the **map_codes(tree,'',dict())** function  
 
 #Step4 Encode the original data using the code mappings from the Huffman Tree  
 for each char in data add its code mapping to the encoded string.  
   
 
 
-Defined a function **huffman_decoding()** which decodes the data according to the tree.  
+Defined a function **huffman_decoding(data,tree)** which decodes the data according to the tree.  
   
 For each bit in encoded data, if int(bit) is 0 i.e. if 0 encountered then walk to the left  
 child. Otherwise walk to the right child  
