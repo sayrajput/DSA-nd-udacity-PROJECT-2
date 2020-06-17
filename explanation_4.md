@@ -25,12 +25,13 @@ If the user is not found in subgroups also and we have no group or subgroup unde
 returns False.  
   
   
-### Time Complexity  
+### Efficiency  
+**Time Complexity**  
 Let g be the no. of groups and u be the no. of users to check in, then the time complexity will be **O(g+u)**  
 for accessing these groups and users.  
   
-
-### Space Complexity  
+**Space Complexity**  
+Space complexity will be **O(n)** because it depends on number of users.  
   
 
 
