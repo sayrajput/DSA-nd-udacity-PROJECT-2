@@ -47,9 +47,6 @@ class Blockchain:
     def size(self):
         return len(self.blocks)
 
-    def blocks_dict(self):
-        return self.blocks
-    
     def get_block(self,index):
         if index in self.blocks:
             return self.blocks[index]
