@@ -64,7 +64,7 @@ calls the **map_codes()** function
 #Step4 Encode the original data using the code mappings from the Huffman Tree  
 for each char in data add its code mapping to the encoded string.  
   
-  
+
 
 Defined a function **huffman_decoding()** which decodes the data according to the tree.  
   
@@ -78,14 +78,14 @@ Add the char of node to the decoded string.
   
 
 
-
-### Time Complexity  
+### Efficiency  
+**Time Complexity**  
 Overall time complexity is **O(nlogn)**  
 How ?  
 Dictionary is used for mapping so it takes O(1) to get values from map  
 For adding values to dictionary it will take O(n) time  
 **heappush()** method takes O(logn) time, for n elements it will take **O(nlogn)** time  
   
-### Space Complexity  
+**Space Complexity**  
 It requires **O(n)** space  
   
