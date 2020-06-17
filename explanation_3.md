@@ -89,3 +89,8 @@ For adding values to dictionary it will take O(n) time
 **Space Complexity**  
 It requires **O(n)** space  
   
+  
+### Design Choice  
+Used heap(using heapq) to implement priority queue as it is operated simply.  
+Dictionary is used to map codes and frequencies so that they can be accessed in O(1) time  
+  
