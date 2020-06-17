@@ -9,7 +9,7 @@ Dictionary
 Defined a class **Block** initialized with index,timestamp,data,previous_hash, hash,  
 next(reference to the next block) where  index, timestamp , data and previous_hash are parameters to the constructor  
   
-`calc_hash()` is method under **Block** class, which calculated hash value of a block.  
+`calc_hash()` is method under **Block** class, which calculates hash value of a block.  
 This function uses index,timestamp,data and previous_hash to generate unique hash for each  
 block.  
   
@@ -50,9 +50,9 @@ self.blocks[block.index] = block
   
 ### Efficiencies  
 
-`Time Complexity`  O(1) for inserting and looking up a block  
+**Time Complexity**  O(1) for inserting and looking up a block  
 
-`Space Complexity`  O(1) for inserting and looking up a block  
+**Space Complexity**  O(1) for inserting and looking up a block  
   
 
 
@@ -74,5 +74,3 @@ each block.
         sha.update(str(self.index).encode('utf-8') + str(self.timestamp).encode('utf-8') + str(self.data).encode('utf-8') + str(self.previous_hash).encode('utf-8'))
 ```  
   
-
-
