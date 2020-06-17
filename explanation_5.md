@@ -9,7 +9,7 @@ Dictionary
 Defined a class **Block** initialized with index,timestamp,data,previous_hash, hash,  
 next(reference to the next block) where  index, timestamp , data and previous_hash are parameters to the constructor  
   
-`calc_hash()` is method under **Block** class, which calculates hash value of a block.  
+`calc_hash(self)` is method under **Block** class, which calculates hash value of a block.  
 This function uses index,timestamp,data and previous_hash to generate unique hash for each  
 block.  
   
@@ -19,7 +19,7 @@ tail are initialized with `None`
   
 Methods under **Blockchain** class are :  
   
-- **append_block()**  which appends a new block to the blockchain. If no data provided for  
+- **append_block(self,data)**  which appends a new block to the blockchain. If no data provided for  
 the new block, it returns 'can't append block without data'  .
 ```python
 if data is None or len(data) ==  0:
@@ -45,8 +45,8 @@ This new block will be added to `blocks` dictionary
 self.blocks[block.index] = block
 ```  
   
-- **size()** returns the size of blocks dictionary  
-- **get_block()** returns a block with index provided. Looks for index in the `blocks` dict()  
+- **size(self)** returns the size of blocks dictionary  
+- **get_block(self,index)** returns a block with index provided. Looks for index in the `blocks` dict()  
   
 ### Efficiencies  
 
