@@ -1,10 +1,19 @@
 # File Recursion
 ## Explanation  
   
+### Data Structures  
+**List**  
+- To store files and dirs under a path  
+#`os.listdir()` returns a list of dirs and files under a path.  
+- To store `fullpath` for each entry a list is used.  
+  
+  
+   
 ### Walkthrough  
-Defied a function **find_files()** which takes suffix and path as parameters. 
-This function returns the call of another function **_find_files()** which is defined  
-within it. _find_files() is called with path and files parameters as 
+Defied a function **find_files()** which takes suffix and path as parameters.  
+This function returns the call of another function **_find_files()** which is defined
+within it.  
+_find_files() is called with path and files parameters as 
 _find_files(path, files)  
 The function find_files() returns _find_files(path,[])  
 ```python
@@ -26,7 +35,7 @@ Entry is checked if it is a dir or a file by checking its fullpath. If it is a d
 the **_find_files(fullpath,files)** is called recursively on that dir and the result is stored  
 in a variable `files`. Otherwise, if the entry is a file and its name ends with `suffix`  
 then its `fullpath` is appended to the files list.  
-of that file/dir by joining path to entry
+(`fullpath` is the string obt. by joining path to entry)  
 At the end of function the `files` list is returned.  
 
 ### Time Complexity
